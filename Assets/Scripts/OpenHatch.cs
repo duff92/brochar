@@ -28,15 +28,21 @@ public class OpenHatch : MonoBehaviour {
             if(Input.GetTouch(0).phase == TouchPhase.Moved && activeHatch)
             {
                 Debug.Log("Moved");
+                float deltaTouchX = Input.GetTouch(0).deltaPosition.x;
+                hinge.transform.Rotate(new Vector3(0, 0, -1) * deltaTouchX * 0.5f);
 
-                hinge.transform.Rotate(new Vector3(0, 0, 1) * Input.GetTouch(0).deltaPosition.x);
-                Debug.Log(hinge.transform.rotation.z);
-
-                if (hinge.transform.eulerAngles.z < 0)
-                    hinge.transform.Rotate(Vector3.zero);
-                if(hinge.transform.eulerAngles.z > 120)
-                    hinge.transform.Rotate(new Vector3(0, 0, 120));
-
+                if (hinge.transform.eulerAngles.z < 240)
+                {
+                    if(deltaTouchX > 0)
+                    {
+                        hinge.transform.eulerAngles = new Vector3(0, 0, 240);
+                    }
+                    else
+                    {
+                        hinge.transform.eulerAngles = new Vector3(0, 0, 359);
+                    }
+                }
+             
 
                 //this.transform.RotateAround(this.transform.position, new Vector3(0,0,1), Input.GetTouch(0).deltaPosition.x * 10);
             }
