@@ -1,9 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Vuforia;
 
-public class SnowCtrl : MonoBehaviour {
+public class ParticleSystemCtrl : MonoBehaviour {
 	private bool playing = false;
-	public Renderer trigger;
+	public ImageTargetBehaviour trigger;
 	// Use this for initialization
 	void Start () {
 
@@ -11,8 +12,8 @@ public class SnowCtrl : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if (trigger.enabled != playing) {
-			playing = trigger.enabled;
+		if ((trigger.CurrentStatus == ImageTargetBehaviour.Status.TRACKED) != playing) {
+			playing = (trigger.CurrentStatus == ImageTargetBehaviour.Status.TRACKED);
 			if (playing) {
 				GetComponent<ParticleSystem> ().Play ();
 			} else {
