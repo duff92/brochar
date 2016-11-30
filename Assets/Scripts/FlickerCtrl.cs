@@ -13,6 +13,5 @@ public class FlickerCtrl : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		light.enabled = (flame.particleCount%2 == 0);
-		Debug.Log (flame.particleCount%2 == 0);
 	}
 }
