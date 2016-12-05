@@ -7,8 +7,9 @@ public class TrailMovement : MonoBehaviour {
 
     public float speed = 0.5f;
     public int laps = 2;
-    public bool activated = false;
-    
+
+    private bool showBorder = false;
+    private bool activated = false;
     private Vector3[] targets = new Vector3[4];
     private int index = 0;
     private int currentLap = 1;
@@ -34,44 +35,40 @@ public class TrailMovement : MonoBehaviour {
     }
     void FixedUpdate()
     {
-        if ((trigger.CurrentStatus == ImageTargetBehaviour.Status.TRACKED) != activated)
+        if ((trigger.CurrentStatus == ImageTargetBehaviour.Status.TRACKED) != activated )
         {
             activated = (trigger.CurrentStatus == ImageTargetBehaviour.Status.TRACKED);
-            if (activated)
+        }
+        if(activated)
+        {
+            if(!particleSystem.isPlaying)
             {
-                if (!particleSystem.isPlaying)
-                {
-                    particleSystem.Play();
-                }
-                else
-                {
-                    float step = speed * Time.fixedDeltaTime;
-                    this.transform.position = Vector3.MoveTowards(this.transform.position, targets[index], step);
-
-                    if (activated && this.transform.position == targets[index])
-                    {
-                        if (index < targets.Length - 1)
-                        {
-                            index++;
-                        }
-                        else
-                        {
-                            if (currentLap < laps)
-                            {
-                                currentLap++;
-                                index = 0;
-                            }
-                            else
-                            {
-                                restoreBorder();
-                            }
-                        }
-                    }
-                }
+                particleSystem.Play();
             }
             else
             {
-                restoreBorder();
+                Debug.Log(currentLap);
+                float step = speed * Time.fixedDeltaTime;
+                this.transform.position = Vector3.MoveTowards(this.transform.position, targets[index], step);
+                if (this.transform.position == targets[index])
+                {
+                    if (index < targets.Length - 1)
+                    {
+                        index++;
+                    }
+                    else
+                    {
+                        if (currentLap < laps)
+                        {
+                            currentLap++;
+                            index = 0;
+                        }
+                        else
+                        {
+                            restoreBorder();
+                        }
+                    }
+                }
             }
         }
 
@@ -82,6 +79,7 @@ public class TrailMovement : MonoBehaviour {
         particleSystem.Stop();
         particleSystem.Clear();
         //to restore the border
+        showBorder = false;
         activated = false;
         index = 0;
         currentLap = 1;
