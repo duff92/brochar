@@ -1,8 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Vuforia;
 
 public class TrailMovement : MonoBehaviour {
-    
+    public ImageTargetBehaviour trigger;
+
     public float speed = 0.5f;
     public int laps = 2;
     public bool activated = false;
@@ -10,7 +12,7 @@ public class TrailMovement : MonoBehaviour {
     private Vector3[] targets = new Vector3[4];
     private int index = 0;
     private int currentLap = 1;
-    private ParticleSystem thisParticleSystem;
+    private ParticleSystem particleSystem;
 
     void Start()
     {
@@ -20,7 +22,7 @@ public class TrailMovement : MonoBehaviour {
 
         float xScale = parentScale.x;
         float zScale = parentScale.z;
-        thisParticleSystem = this.gameObject.GetComponent<ParticleSystem>();
+        particleSystem = this.gameObject.GetComponent<ParticleSystem>();
         Debug.Log(xScale + ", " + zScale);
         //Find corners uses TransformPoint that goes from local to world coordinates
         targets[0] = transform.TransformPoint(new Vector3(-2 * xScale, transform.position.y, 0.0f));
@@ -32,42 +34,56 @@ public class TrailMovement : MonoBehaviour {
     }
     void FixedUpdate()
     {
-        if(activated)
+        if ((trigger.CurrentStatus == ImageTargetBehaviour.Status.TRACKED) != activated)
         {
-            if (!thisParticleSystem.isPlaying) {
-                thisParticleSystem.Play();
-            }
-            else {
-                float step = speed * Time.fixedDeltaTime;
-                this.transform.position = Vector3.MoveTowards(this.transform.position, targets[index], step);
-
-                if(activated && this.transform.position == targets[index])
+            activated = (trigger.CurrentStatus == ImageTargetBehaviour.Status.TRACKED);
+            if (activated)
+            {
+                if (!particleSystem.isPlaying)
                 {
-                    if(index < targets.Length -1)
+                    particleSystem.Play();
+                }
+                else
+                {
+                    float step = speed * Time.fixedDeltaTime;
+                    this.transform.position = Vector3.MoveTowards(this.transform.position, targets[index], step);
+
+                    if (activated && this.transform.position == targets[index])
                     {
-                        index++;
-                    }
-                    else
-                    {
-                        if(currentLap < laps)
+                        if (index < targets.Length - 1)
                         {
-                            currentLap++;
-                            index = 0;
+                            index++;
                         }
                         else
                         {
-                            //Destroy(this.gameObject);
-                            thisParticleSystem.Stop();
-                            thisParticleSystem.Clear();
-                            //to restore the border
-                            activated = false;
-                            index = 0;
-                            currentLap = 1;
+                            if (currentLap < laps)
+                            {
+                                currentLap++;
+                                index = 0;
+                            }
+                            else
+                            {
+                                restoreBorder();
+                            }
                         }
                     }
                 }
             }
+            else
+            {
+                restoreBorder();
+            }
         }
 
+    }
+
+    void restoreBorder()
+    {
+        particleSystem.Stop();
+        particleSystem.Clear();
+        //to restore the border
+        activated = false;
+        index = 0;
+        currentLap = 1;
     }
 }
