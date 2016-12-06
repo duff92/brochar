@@ -4,15 +4,12 @@ using Vuforia;
 
 public class TrailMovement : MonoBehaviour {
     public ImageTargetBehaviour trigger;
-
+    public GameObject hinge;
     public float speed = 0.5f;
-    public int laps = 2;
-
-    private bool showBorder = false;
+    
     private bool activated = false;
     private Vector3[] targets = new Vector3[4];
     private int index = 0;
-    private int currentLap = 1;
     private ParticleSystem particleSystem;
 
     void Start()
@@ -39,7 +36,7 @@ public class TrailMovement : MonoBehaviour {
         {
             activated = (trigger.CurrentStatus == ImageTargetBehaviour.Status.TRACKED);
         }
-        if(activated)
+        if(activated && hinge.transform.eulerAngles.z == 0)
         {
             if(!particleSystem.isPlaying)
             {
@@ -47,7 +44,6 @@ public class TrailMovement : MonoBehaviour {
             }
             else
             {
-                Debug.Log(currentLap);
                 float step = speed * Time.fixedDeltaTime;
                 this.transform.position = Vector3.MoveTowards(this.transform.position, targets[index], step);
                 if (this.transform.position == targets[index])
@@ -58,30 +54,15 @@ public class TrailMovement : MonoBehaviour {
                     }
                     else
                     {
-                        if (currentLap < laps)
-                        {
-                            currentLap++;
-                            index = 0;
-                        }
-                        else
-                        {
-                            restoreBorder();
-                        }
+                        //If back to first position, reset index of targets
+                        index = 0;
                     }
                 }
             }
         }
-
-    }
-
-    void restoreBorder()
-    {
-        particleSystem.Stop();
-        particleSystem.Clear();
-        //to restore the border
-        showBorder = false;
-        activated = false;
-        index = 0;
-        currentLap = 1;
+        if(hinge.transform.localEulerAngles.z > 240 && hinge.transform.localEulerAngles.z < 359)
+        {
+            Destroy(this.gameObject);
+        }
     }
 }
