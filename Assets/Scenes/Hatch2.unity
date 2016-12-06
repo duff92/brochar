@@ -822,18 +822,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   molotov: {fileID: 763766698}
   rudolph: {fileID: 1544730843}
---- !u!65 &809569315
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 809569313}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.4894586, y: 1.9415331, z: 1.2275949}
-  m_Center: {x: 0.18888679, y: 1.4217936, z: -0.58701605}
 --- !u!4 &831682885 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: c9ff625b4a8d12343b2bc63cf897aaa9, type: 3}
@@ -2057,7 +2045,8 @@ Prefab:
       propertyPath: randomSeed
       value: 2004485135
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114726030838245620, guid: 2cdaec9c3f46dbb48b1425f7e2adb4b8, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 2cdaec9c3f46dbb48b1425f7e2adb4b8, type: 2}
   m_IsPrefabParent: 0
 --- !u!114 &1486169662 stripped
@@ -2162,8 +2151,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1521873514}
-  - component: {fileID: 1521873516}
-  - component: {fileID: 1521873515}
   m_Layer: 0
   m_Name: Mask
   m_TagString: Untagged
@@ -2188,30 +2175,6 @@ Transform:
   m_Father: {fileID: 844194153}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1521873515
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1521873513}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff7cdd196e827f645a6f488c44cbbf92, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_queues: b80b0000
---- !u!114 &1521873516
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1521873513}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff7cdd196e827f645a6f488c44cbbf92, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_queues: b80b0000
 --- !u!1 &1544730841
 GameObject:
   m_ObjectHideFlags: 0
