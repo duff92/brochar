@@ -21,7 +21,12 @@ public class LoadOnClick : MonoBehaviour {
 		if (activatedHatch && loadScene == false) {
 			loadScene = true;
 			loadingObject.SetActive (true);
-			loadingText.text = "Loading hatch " + scene;
+			if (scene == 0) {
+				loadingText.text = "Loading map";
+			}
+			else{
+				loadingText.text = "Loading hatch " + scene;
+			}
 
 			StartCoroutine(LoadNewScene());
 		}
@@ -35,10 +40,6 @@ public class LoadOnClick : MonoBehaviour {
 
 
 	IEnumerator LoadNewScene() {
-
-		// Waits for 3 seconds before executing the next line in the coroutine.
-		// Is only necessary for testing. Scenes are so simple that they load too fast to read the "Loading..." text.
-		yield return new WaitForSeconds(3);
 
 		// Start an asynchronous operation to load the scene that was passed to the LoadNewScene coroutine.
 		AsyncOperation async = Application.LoadLevelAsync(scene);
