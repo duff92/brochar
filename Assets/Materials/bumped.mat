@@ -6,7 +6,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: ice
+  m_Name: bumped
   m_Shader: {fileID: 4800000, guid: 774d99376ebf15146a61ca6cdb1e657e, type: 3}
   m_ShaderKeywords: _EMISSION
   m_LightmapFlags: 1
@@ -48,7 +48,7 @@ Material:
     - first:
         name: _MainTex
       second:
-        m_Texture: {fileID: 2800000, guid: dd8287d41aafb4b4bacd7e0ebf634a0c, type: 3}
+        m_Texture: {fileID: 2800000, guid: f57d9844e998f444dbe7631e957481ff, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
@@ -60,7 +60,7 @@ Material:
     - first:
         name: _NormalMap
       second:
-        m_Texture: {fileID: 2800000, guid: 6da764bc95664e2ca4c350c6c31a324f, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
@@ -73,12 +73,6 @@ Material:
         name: _ParallaxMap
       second:
         m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - first:
-        name: _ScatterTex
-      second:
-        m_Texture: {fileID: 2800000, guid: 086fb17b12afce540a1369047ad5cc3d, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
@@ -120,7 +114,7 @@ Material:
       second: 10
     - first:
         name: _Shininess
-      second: 0.28
+      second: 0.036
     - first:
         name: _SmoothnessTextureChannel
       second: 0
@@ -135,23 +129,23 @@ Material:
       second: 0
     - first:
         name: _Waxiness
-      second: 0.312
+      second: 0
     - first:
         name: _ZWrite
       second: 1
     m_Colors:
     - first:
         name: _Color
-      second: {r: 0.272, g: 1, b: 1, a: 1}
+      second: {r: 1, g: 1, b: 1, a: 1}
     - first:
         name: _DiffuseTranslucentColor
-      second: {r: 0.8602941, g: 0.42382136, b: 0.42382136, a: 1}
+      second: {r: 1, g: 1, b: 1, a: 1}
     - first:
         name: _EmissionColor
       second: {r: 0, g: 0, b: 0, a: 1}
     - first:
         name: _ForwardTranslucentColor
-      second: {r: 0.087045826, g: 0.8455882, b: 0.12366518, a: 1}
+      second: {r: 1, g: 1, b: 1, a: 1}
     - first:
         name: _SpecColor
       second: {r: 1, g: 1, b: 1, a: 1}
