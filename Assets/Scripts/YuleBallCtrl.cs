@@ -5,12 +5,13 @@ using UnityEngine;
 public class YuleBallCtrl : MonoBehaviour {
 
 	public CrystalHatch Hatch;
-	float timer = Random.Range(0.5f, 5f);
+	float timer;
 	Vector3 startPosition;
 
 	// Use this for initialization
 	void Start () {
 
+		timer = Random.Range(0.5f, 5f);
 		startPosition = transform.position;
 
 	}

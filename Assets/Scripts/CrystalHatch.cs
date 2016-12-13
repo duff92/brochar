@@ -43,6 +43,7 @@ public class CrystalHatch : MonoBehaviour {
 		}
 
 		if (hatchOpen) {
+
 			for (int i = 0; i < Yuleballs.childCount; i++) {
 				Yuleballs.GetChild (i).gameObject.GetComponent<Rigidbody> ().useGravity = true;
 				// set hatchenabled for ball.
