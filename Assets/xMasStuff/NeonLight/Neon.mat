@@ -6,8 +6,8 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: No Name
-  m_Shader: {fileID: 4800000, guid: 1ce7eb78425fb1540838bc9d5d95857a, type: 3}
+  m_Name: Neon
+  m_Shader: {fileID: 4800000, guid: 260bfd28d73b01e4a9e8638ab8c25e3a, type: 3}
   m_ShaderKeywords: _EMISSION
   m_LightmapFlags: 1
   m_CustomRenderQueue: -1
@@ -104,6 +104,9 @@ Material:
         name: _Parallax
       second: 0.02
     - first:
+        name: _Radius
+      second: 0.73
+    - first:
         name: _SmoothnessTextureChannel
       second: 0
     - first:
@@ -120,8 +123,11 @@ Material:
       second: 1
     m_Colors:
     - first:
+        name: _Centre
+      second: {r: 1, g: 0, b: 0, a: 1}
+    - first:
         name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+      second: {r: 0.15884516, g: 0.69184005, b: 0.8308824, a: 1}
     - first:
         name: _EmissionColor
       second: {r: 0, g: 0, b: 0, a: 1}

@@ -5,7 +5,10 @@ using UnityEngine;
 public class CrystalHatch : MonoBehaviour {
 	public GameObject[] fragments;
 	public bool sequential;
+	public bool hatchOpen = false;
 	private int counter = 0;
+
+	public Transform Yuleballs;
 	// Use this for initialization
 	void Start () {
 		
@@ -21,6 +24,11 @@ public class CrystalHatch : MonoBehaviour {
 				Vector3 rotation = new Vector3 (Random.value-0.5f, Random.value-0.5f, Random.value-0.5f)*2000;
 				rb.AddForce(direction);
 				rb.AddTorque(rotation);
+
+				hatchOpen = true;
+
+
+
 			}
 		}
 		if (Input.GetMouseButtonUp (0) && sequential) {
@@ -32,6 +40,20 @@ public class CrystalHatch : MonoBehaviour {
 			rb.AddForce(direction);
 			rb.AddTorque(rotation);
 			counter++;
+		}
+
+		if (hatchOpen) {
+
+			for (int i = 0; i < Yuleballs.childCount; i++) {
+				Yuleballs.GetChild (i).gameObject.GetComponent<Rigidbody> ().useGravity = true;
+				// set hatchenabled for ball.
+			}
+
+
+
+				//<<<in ball script>>>
+				// start timer on hatchenabled
+				// reset to parent position with fixed velocity.
 		}
 	}
 }
