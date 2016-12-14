@@ -28,7 +28,6 @@ public class CubeMapper : MonoBehaviour
 
         gameObject.AddComponent<Camera>();
 		gameObject.GetComponent<Camera>().clearFlags = CameraClearFlags.Depth;
-		gameObject.AddComponent<Camera>().farClipPlane = 300;
    
 
         renderTex = new RenderTexture(cubeMapRes, cubeMapRes, 16);

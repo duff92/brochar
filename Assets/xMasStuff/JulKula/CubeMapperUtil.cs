@@ -59,7 +59,7 @@ public class CubeMapperUtil : MonoBehaviour
 
     void UpdateCubemap()
     {
-        Debug.Log("Updating!");
+       // Debug.Log("Updating!");
         m.SetTexture("_Cube", thisCubemapper.UpdateRenderTexture());
 
     }
