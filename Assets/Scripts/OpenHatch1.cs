@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class OpenHatch : MonoBehaviour {
-
-    private bool activeHatch = false;
+public class OpenHatch1 : MonoBehaviour {
+    
+    public bool activeHatch = false;
     public GameObject hinge;
 	// Update is called once per frame
 	void Update () {
@@ -42,7 +42,6 @@ public class OpenHatch : MonoBehaviour {
                         hinge.transform.eulerAngles = new Vector3(0, 0, 359);
                     }
                 }
-             
 
                 //this.transform.RotateAround(this.transform.position, new Vector3(0,0,1), Input.GetTouch(0).deltaPosition.x * 10);
             }
