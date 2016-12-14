@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Lever
+  - Hatch
+  - crystalExploding
   layers:
   - Default
   - TransparentFX
