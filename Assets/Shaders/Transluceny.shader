@@ -1,7 +1,6 @@
-﻿// Upgrade NOTE: replaced '_Object2World' with 'unity_ObjectToWorld'
-// Upgrade NOTE: replaced '_World2Object' with 'unity_WorldToObject'
+﻿
 
-Shader "Calle/Transluceny" {
+Shader "Custom/Transluceny" {
 	Properties{
 		_Color("Diffuse Color", Color) = (1,1,1,1)
 		_Waxiness("Waxiness", Range(0,1)) = 0
@@ -415,5 +414,5 @@ Shader "Calle/Transluceny" {
 	
 	}
 		
-		//Fallback "Specular"
+		Fallback "Specular"
 }
