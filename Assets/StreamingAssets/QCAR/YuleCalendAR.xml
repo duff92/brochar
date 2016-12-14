@@ -2,19 +2,7 @@
 <QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
   <Tracking>
     <ImageTarget name="yuleskum_new" size="1.000000 0.549025" />
-    <ImageTarget name="yuleScumet" size="1.000000 0.505900" />
-    <ImageTarget name="Fountain_symbol_tracker" size="1.000000 1.029006" />
-    <ImageTarget name="outdoor_infosign" size="1.000000 0.750000" />
-    <ImageTarget name="Fountain_icon" size="1.000000 1.000000" />
-    <ImageTarget name="YuleSkum_tracker" size="1.000000 0.750000" />
-    <ImageTarget name="Door" size="1.000000 1.000000" />
-    <ImageTarget name="cAwards" size="1.000000 0.897371" />
-    <ImageTarget name="adventsyulestake" size="1.000000 0.750000" />
-    <ImageTarget name="santa_tracker" size="1.000000 0.750000" />
-    <ImageTarget name="chrismtas_star" size="1.000000 0.882396" />
     <ImageTarget name="cAwards_tracker" size="1.000000 0.859862" />
-    <ImageTarget name="vic" size="1.000000 0.587921" />
     <ImageTarget name="exit" size="1.000000 0.750000" />
-    <ImageTarget name="stones" size="1.000000 0.699844" />
   </Tracking>
 </QCARConfig>
