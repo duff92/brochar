@@ -15,45 +15,55 @@ public class CrystalHatch : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		if (Input.GetMouseButtonUp (0) && !sequential) {
-			foreach (GameObject fragment in fragments) {
-				Rigidbody rb = fragment.GetComponent<Rigidbody> ();
-				rb.isKinematic = false;
-				Vector3 direction = new Vector3 (Random.value-0.5f, Random.value, Random.value-0.5f)*100;
-				Vector3 rotation = new Vector3 (Random.value-0.5f, Random.value-0.5f, Random.value-0.5f)*2000;
-				rb.AddForce(direction);
-				rb.AddTorque(rotation);
+	void FixedUpdate () {
+        if(Input.touchCount > 0)
+        {
+            if (Input.GetTouch(0).phase == TouchPhase.Began)
+            {
+                Debug.Log("Began");
+                RaycastHit hit;
+                // Construct a ray from the current touch coordinates
+                Ray ray = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
 
-				hatchOpen = true;
+                if (Physics.Raycast(ray, out hit, 100))
+                {
+                    if (hit.transform.gameObject.tag == "crystalExploding")
+                    {
+                        if (!sequential)
+                        {
+                            foreach (GameObject fragment in fragments)
+                            {
+                                Rigidbody rb = fragment.GetComponent<Rigidbody>();
+                                rb.isKinematic = false;
+                                Vector3 direction = new Vector3(Random.value - 0.5f, Random.value, Random.value - 0.5f) * 100;
+                                Vector3 rotation = new Vector3(Random.value - 0.5f, Random.value - 0.5f, Random.value - 0.5f) * 2000;
+                                rb.AddForce(direction);
+                                rb.AddTorque(rotation);
 
+                                hatchOpen = true;
 
+                            }
+                        }
+                        if (sequential)
+                        {
+                            GameObject fragment = fragments[counter];
+                            Rigidbody rb = fragment.GetComponent<Rigidbody>();
+                            rb.isKinematic = false;
+                            Vector3 direction = new Vector3(Random.value - 0.5f, Random.value, Random.value - 0.5f) * 200;
+                            Vector3 rotation = new Vector3(Random.value - 0.5f, Random.value - 0.5f, Random.value - 0.5f) * 2000;
+                            rb.AddForce(direction);
+                            rb.AddTorque(rotation);
+                            counter++;
+                        }
+                    }
+                }
+            }
+		    if (hatchOpen) {
 
-			}
-		}
-		if (Input.GetMouseButtonUp (0) && sequential) {
-			GameObject fragment = fragments [counter];
-			Rigidbody rb = fragment.GetComponent<Rigidbody> ();
-			rb.isKinematic = false;
-			Vector3 direction = new Vector3 (Random.value-0.5f, Random.value, Random.value-0.5f)*200;
-			Vector3 rotation = new Vector3 (Random.value-0.5f, Random.value-0.5f, Random.value-0.5f)*2000;
-			rb.AddForce(direction);
-			rb.AddTorque(rotation);
-			counter++;
-		}
-
-		if (hatchOpen) {
-
-			for (int i = 0; i < Yuleballs.childCount; i++) {
-				Yuleballs.GetChild (i).gameObject.GetComponent<Rigidbody> ().useGravity = true;
-				// set hatchenabled for ball.
-			}
-
-
-
-				//<<<in ball script>>>
-				// start timer on hatchenabled
-				// reset to parent position with fixed velocity.
-		}
+			    for (int i = 0; i < Yuleballs.childCount; i++) {
+				    Yuleballs.GetChild (i).gameObject.GetComponent<Rigidbody> ().useGravity = true;
+			    }
+		    }
+        }
 	}
 }
