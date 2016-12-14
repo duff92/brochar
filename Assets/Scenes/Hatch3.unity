@@ -162,6 +162,7 @@ MonoBehaviour:
   - {fileID: 102482595}
   sequential: 0
   hatchOpen: 0
+  activeHatch: 0
   Yuleballs: {fileID: 1390735974}
 --- !u!82 &11542357
 AudioSource:
@@ -373,7 +374,7 @@ GameObject:
   - component: {fileID: 60729529}
   m_Layer: 0
   m_Name: Shard5
-  m_TagString: Untagged
+  m_TagString: crystalExploding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -459,7 +460,7 @@ GameObject:
   - component: {fileID: 66366015}
   m_Layer: 0
   m_Name: Shard7
-  m_TagString: Untagged
+  m_TagString: crystalExploding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -545,7 +546,7 @@ GameObject:
   - component: {fileID: 102482599}
   m_Layer: 0
   m_Name: Shard3
-  m_TagString: Untagged
+  m_TagString: crystalExploding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -697,7 +698,7 @@ GameObject:
   - component: {fileID: 126125111}
   m_Layer: 0
   m_Name: Shard8
-  m_TagString: Untagged
+  m_TagString: crystalExploding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1004,6 +1005,111 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 145798716}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &184032314
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 224000013905517574, guid: 059d4ca0fad2c4b4db91bce0c1a58838,
+        type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224000013905517574, guid: 059d4ca0fad2c4b4db91bce0c1a58838,
+        type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224000013905517574, guid: 059d4ca0fad2c4b4db91bce0c1a58838,
+        type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224000013905517574, guid: 059d4ca0fad2c4b4db91bce0c1a58838,
+        type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224000013905517574, guid: 059d4ca0fad2c4b4db91bce0c1a58838,
+        type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224000013905517574, guid: 059d4ca0fad2c4b4db91bce0c1a58838,
+        type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224000013905517574, guid: 059d4ca0fad2c4b4db91bce0c1a58838,
+        type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224000013905517574, guid: 059d4ca0fad2c4b4db91bce0c1a58838,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224000013905517574, guid: 059d4ca0fad2c4b4db91bce0c1a58838,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224000013905517574, guid: 059d4ca0fad2c4b4db91bce0c1a58838,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224000013905517574, guid: 059d4ca0fad2c4b4db91bce0c1a58838,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224000013905517574, guid: 059d4ca0fad2c4b4db91bce0c1a58838,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224000013905517574, guid: 059d4ca0fad2c4b4db91bce0c1a58838,
+        type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224000013905517574, guid: 059d4ca0fad2c4b4db91bce0c1a58838,
+        type: 2}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224000013905517574, guid: 059d4ca0fad2c4b4db91bce0c1a58838,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224000013905517574, guid: 059d4ca0fad2c4b4db91bce0c1a58838,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224000013905517574, guid: 059d4ca0fad2c4b4db91bce0c1a58838,
+        type: 2}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224000013905517574, guid: 059d4ca0fad2c4b4db91bce0c1a58838,
+        type: 2}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011406040438, guid: 059d4ca0fad2c4b4db91bce0c1a58838,
+        type: 2}
+      propertyPath: m_Texture
+      value: 
+      objectReference: {fileID: 2800000, guid: 4c9d7ed8c72b3f8468068301e4b49574, type: 3}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 059d4ca0fad2c4b4db91bce0c1a58838, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &198976001
 GameObject:
   m_ObjectHideFlags: 0
@@ -2193,7 +2299,7 @@ GameObject:
   - component: {fileID: 538448365}
   m_Layer: 0
   m_Name: Shard4
-  m_TagString: Untagged
+  m_TagString: crystalExploding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2994,7 +3100,7 @@ GameObject:
   - component: {fileID: 729443807}
   m_Layer: 0
   m_Name: Shard1
-  m_TagString: Untagged
+  m_TagString: crystalExploding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3450,6 +3556,191 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e14e50d1c0e386e4c89ac63c487e057c, type: 2}
   m_IsPrefabParent: 0
+--- !u!21 &809948061
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: JulKula (Instance) (Instance) (Instance) (Instance) (Instance) (Instance)
+    (Instance) (Instance) (Instance) (Instance) (Instance) (Instance) (Instance) (Instance)
+    (Instance) (Instance) (Instance) (Instance) (Instance) (Instance) (Instance) (Instance)
+    (Instance) (Instance) (Instance) (Instance) (Instance) (Instance) (Instance) (Instance)
+    (Instance) (Instance) (Instance) (Instance) (Instance) (Instance) (Instance) (Instance)
+    (Instance) (Instance) (Instance) (Instance) (Instance) (Instance) (Instance) (Instance)
+    (Instance) (Instance) (Instance)
+  m_Shader: {fileID: 4800000, guid: aa4d645ef16cbd543880bec4974911c9, type: 3}
+  m_ShaderKeywords: _EMISSION
+  m_LightmapFlags: 1
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _BumpMap
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _Cube
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _DetailAlbedoMap
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _DetailMask
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _DetailNormalMap
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _EmissionMap
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _MetallicGlossMap
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _OcclusionMap
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _ParallaxMap
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - first:
+        name: _BumpScale
+      second: 1
+    - first:
+        name: _Cutoff
+      second: 0.5
+    - first:
+        name: _DetailNormalMapScale
+      second: 1
+    - first:
+        name: _DstBlend
+      second: 0
+    - first:
+        name: _GlossMapScale
+      second: 1
+    - first:
+        name: _Glossiness
+      second: 0.5
+    - first:
+        name: _GlossyReflections
+      second: 1
+    - first:
+        name: _InversionMultiplierX
+      second: 0
+    - first:
+        name: _InversionMultiplierY
+      second: 0
+    - first:
+        name: _Metallic
+      second: 0
+    - first:
+        name: _Mode
+      second: 0
+    - first:
+        name: _OcclusionStrength
+      second: 1
+    - first:
+        name: _Parallax
+      second: 0.02
+    - first:
+        name: _PrefixX
+      second: 0
+    - first:
+        name: _PrefixY
+      second: 0
+    - first:
+        name: _Radius
+      second: 0.5
+    - first:
+        name: _ScreenHeight
+      second: 0
+    - first:
+        name: _ScreenWidth
+      second: 0
+    - first:
+        name: _SmoothnessTextureChannel
+      second: 0
+    - first:
+        name: _Specular
+      second: 1
+    - first:
+        name: _SpecularHighlights
+      second: 1
+    - first:
+        name: _SrcBlend
+      second: 1
+    - first:
+        name: _TextureRatioX
+      second: 0
+    - first:
+        name: _TextureRatioY
+      second: 0
+    - first:
+        name: _UVSec
+      second: 0
+    - first:
+        name: _ViewportOrigX
+      second: 0
+    - first:
+        name: _ViewportOrigY
+      second: 0
+    - first:
+        name: _ViewportSizeX
+      second: 0
+    - first:
+        name: _ViewportSizeY
+      second: 0
+    - first:
+        name: _ZWrite
+      second: 1
+    m_Colors:
+    - first:
+        name: _Centre
+      second: {r: 0.17711747, g: -1.320989, b: 1.3330657, a: 0}
+    - first:
+        name: _Color
+      second: {r: 0.9852941, g: 0.036224023, b: 0.036224023, a: 1}
+    - first:
+        name: _EmissionColor
+      second: {r: 0, g: 0, b: 0, a: 1}
+    - first:
+        name: _SpecularLightColor
+      second: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1 &841955587
 GameObject:
   m_ObjectHideFlags: 0
@@ -4426,7 +4717,7 @@ GameObject:
   - component: {fileID: 1085412794}
   m_Layer: 0
   m_Name: Shard9
-  m_TagString: Untagged
+  m_TagString: crystalExploding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5511,7 +5802,7 @@ GameObject:
   - component: {fileID: 1259185672}
   m_Layer: 0
   m_Name: Shard0
-  m_TagString: Untagged
+  m_TagString: crystalExploding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5676,7 +5967,7 @@ GameObject:
   - component: {fileID: 1397819600}
   m_Layer: 0
   m_Name: Shard6
-  m_TagString: Untagged
+  m_TagString: crystalExploding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6159,7 +6450,7 @@ Prefab:
         type: 2}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 1525170998}
+      objectReference: {fileID: 809948061}
     - target: {fileID: 4000010006552576, guid: 7f0a82214e2c20b4ebba647884dd93d2, type: 2}
       propertyPath: m_LocalScale.x
       value: 0.2
@@ -6184,190 +6475,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7f0a82214e2c20b4ebba647884dd93d2, type: 2}
   m_IsPrefabParent: 0
---- !u!21 &1525170998
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: JulKula (Instance) (Instance) (Instance) (Instance) (Instance) (Instance)
-    (Instance) (Instance) (Instance) (Instance) (Instance) (Instance) (Instance) (Instance)
-    (Instance) (Instance) (Instance) (Instance) (Instance) (Instance) (Instance) (Instance)
-    (Instance) (Instance) (Instance) (Instance) (Instance) (Instance) (Instance) (Instance)
-    (Instance) (Instance) (Instance) (Instance) (Instance) (Instance) (Instance) (Instance)
-    (Instance)
-  m_Shader: {fileID: 4800000, guid: aa4d645ef16cbd543880bec4974911c9, type: 3}
-  m_ShaderKeywords: _EMISSION
-  m_LightmapFlags: 1
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  m_SavedProperties:
-    serializedVersion: 2
-    m_TexEnvs:
-    - first:
-        name: _BumpMap
-      second:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - first:
-        name: _Cube
-      second:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - first:
-        name: _DetailAlbedoMap
-      second:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - first:
-        name: _DetailMask
-      second:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - first:
-        name: _DetailNormalMap
-      second:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - first:
-        name: _EmissionMap
-      second:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - first:
-        name: _MainTex
-      second:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - first:
-        name: _MetallicGlossMap
-      second:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - first:
-        name: _OcclusionMap
-      second:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - first:
-        name: _ParallaxMap
-      second:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - first:
-        name: _BumpScale
-      second: 1
-    - first:
-        name: _Cutoff
-      second: 0.5
-    - first:
-        name: _DetailNormalMapScale
-      second: 1
-    - first:
-        name: _DstBlend
-      second: 0
-    - first:
-        name: _GlossMapScale
-      second: 1
-    - first:
-        name: _Glossiness
-      second: 0.5
-    - first:
-        name: _GlossyReflections
-      second: 1
-    - first:
-        name: _InversionMultiplierX
-      second: 0
-    - first:
-        name: _InversionMultiplierY
-      second: 0
-    - first:
-        name: _Metallic
-      second: 0
-    - first:
-        name: _Mode
-      second: 0
-    - first:
-        name: _OcclusionStrength
-      second: 1
-    - first:
-        name: _Parallax
-      second: 0.02
-    - first:
-        name: _PrefixX
-      second: 0
-    - first:
-        name: _PrefixY
-      second: 0
-    - first:
-        name: _Radius
-      second: 0.5
-    - first:
-        name: _ScreenHeight
-      second: 0
-    - first:
-        name: _ScreenWidth
-      second: 0
-    - first:
-        name: _SmoothnessTextureChannel
-      second: 0
-    - first:
-        name: _Specular
-      second: 1
-    - first:
-        name: _SpecularHighlights
-      second: 1
-    - first:
-        name: _SrcBlend
-      second: 1
-    - first:
-        name: _TextureRatioX
-      second: 0
-    - first:
-        name: _TextureRatioY
-      second: 0
-    - first:
-        name: _UVSec
-      second: 0
-    - first:
-        name: _ViewportOrigX
-      second: 0
-    - first:
-        name: _ViewportOrigY
-      second: 0
-    - first:
-        name: _ViewportSizeX
-      second: 0
-    - first:
-        name: _ViewportSizeY
-      second: 0
-    - first:
-        name: _ZWrite
-      second: 1
-    m_Colors:
-    - first:
-        name: _Centre
-      second: {r: 0.17711747, g: -1.320989, b: 1.3330657, a: 0}
-    - first:
-        name: _Color
-      second: {r: 0.9852941, g: 0.036224023, b: 0.036224023, a: 1}
-    - first:
-        name: _EmissionColor
-      second: {r: 0, g: 0, b: 0, a: 1}
-    - first:
-        name: _SpecularLightColor
-      second: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1 &1529675331
 GameObject:
   m_ObjectHideFlags: 0
@@ -6498,7 +6605,7 @@ GameObject:
   - component: {fileID: 1566027208}
   m_Layer: 0
   m_Name: Shard2
-  m_TagString: Untagged
+  m_TagString: crystalExploding
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
